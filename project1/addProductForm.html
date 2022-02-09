@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품추가</title>
+</head>
+<body>
+   <style> 
+      header { text-align: center; margin-top: 20px;}
+      .tnb { position: absolute; right:50px; top: 20px; }
+      .gnb li { display: inline-block; margin-top: 50px; }
+      </style>
+      <header>
+      <h3>관리자 페이지</h3>
+            <a href="admin.html" class="logo">
+            <img src="./img/logo.png" alt="로고" />
+         </a>
+         <nav class="gnb">
+            <ul>
+               <li><a href="getMemberList.html">회원관리</a></li>
+               <li><a href="getProductList.html">제품관리</a></li>
+               <li><a href="getNoticeList.html">게시판 관리</a></li>
+            </ul>
+         </nav>
+         <nav class="tnb">
+            <ul>
+               <li><a href="admin_logout.html">관리자 로그아웃</a></li>
+            </ul>
+         </nav>
+      </header>
+<form action="" method="post" id="frm" name="frm">
+   <table class="tb">
+      <tbody> 
+         <tr>
+            <th class="">
+               <label for="pro_num">제품번호</label>
+            </th>
+            <td class="">
+               <input type="text" id="pro_num" name="pro_num" class="in_data" value="제품번호" readonly required />
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="proname" >제품이름</label>
+            </th>
+            <td class="">
+               <input type="text" id="proname" name="proname" class="in_data" />
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="proprice">제품가격</label>
+            </th>
+            <td class="">
+               <input type="text" id="proprice" name="proprice" class="in_data"/>
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="procnt">제품수량</label>
+            </th>
+            <td class="">
+               <input type="text" id="procnt" name="procnt" class="in_data"/>
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="proimg">제품사진</label>
+            </th>
+			<td class="">
+               <img src="./img/noImg.png" alt="제품이미지" id="proData" value="id"/>
+                  <input type="button" onclick="imgCheck()" value="이미지 업로드"/>
+                  <input type="hidden" name="proimg" id="proimg" value=""/>
+                  <input type="hidden"  name="imgck" id="imgck" value=""/>
+
+            </td>
+         </tr>
+      </tbody>
+   </table>
+    <hr />
+   <div class="btn_wrap">   
+      <button type="submit" class="in_btn" onclick="">등록</button>
+      <button type="reset" class="in_btn" onclick="">취소</button>
+   </div>   
+</form>
+<script>
+   function imgCheck() {
+      window.open("imgCheckform.jsp", "imguploadcheck", "width=300, height=300");
+      return false;
+   }
+   function pCheck(f) {
+      if(f.imgck.value=="yes"){
+         alert("이미지가 변경되었습니다.");
+      } else {
+         alert("이미지가 변경되지 않았습니다.");
+      }
+   }
+   </script>		
+</body>
+</html>

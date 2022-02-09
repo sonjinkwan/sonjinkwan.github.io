@@ -1,0 +1,25 @@
+  body, html { width: 100%; }
+    ul { list-style: none; }
+    a { text-decoration: none; }  
+    .wrap { width: 100%; }
+    .hd { width: 100%; background:rgba(30,30,30,0.85); height:120px;  
+    position:fixed; top: 0; left: 0; z-index:999; }
+
+    .tnb { width: 100%; }
+    .tnb .left { float:left; }
+    .tnb .right { float:right; }
+    .tnb li { float:left; margin-top: 20px; }
+    .tnb .left li { margin-right: 20px; }
+    .tnb .right li { margin-left: 20px; }
+    .tnb li a { color:#fff; font-size:16px; }
+   
+    .gnb { clear:both; width: 100%; }
+    .gnb > ul > li { float:left; margin-top: 36px; width: 20%; }
+    .gnb li a.dp1 { display:block; height: 42px; line-height: 42px; color:#fff;
+    text-align:center; background-color:#222; }
+    .gnb li:hover a.dp1 { background-color:orange; }
+    .gnb li .sub { visibility:hidden; opacity:0; transition:0.5s; }
+    .gnb li:hover .sub { visibility: visible; opacity:1; }
+    .gnb .sub li { clear:both; height: 40px; line-height: 40px; }
+    .gnb .sub li a { display:block; height: 40px; line-height: 40px; color:#eee; background:rgba(22,22,22,0.8); padding-left:20px; }
+    .gnb .sub li:hover a { color:orange; }

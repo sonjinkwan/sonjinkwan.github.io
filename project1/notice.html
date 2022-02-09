@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항 목록</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/main.css">
+<style>
+.tit { text-align:center; padding-top: 50px; }
+table { display:table; border-collapse:collapse; }
+tr { display:table-row; }
+th, td { display:table-cell; }
+.tb { width:500px; margin:40px auto; }
+.tb th, .tb td { line-height:36px; border-bottom:1px solid #333; }
+.tb th { border-top:2px solid #333; background:#ffd35e; }
+.tb tbody tr:nth-child(2n) td { background:#fff6de; }
+.btn_wrap { width: 220px; margin: 20px auto; }
+.btn_wrap .in_btn { display: block; width: 80px; margin: 15px; background-color: #333; color: #fff; 
+	text-align: center; border: 0; outline: 0; float: left; line-height: 38px; }
+	.btn_wrap .in_btn:hover { background-color:green; }
+	
+</style>
+
+</head>
+<body>
+<div class="wrap">
+	<div>
+		<a href="index.html"><img src="./img/logo.png" alt="" class="logo" /></a>
+	</div>
+		<div class="wrap">
+			<header class="hd">
+				<nav class="gnb">
+					   <ul>
+						   <li><a href="heavy.html" class="dp1">무거운 향수</a>
+						   <ul>
+								  <li><a href="heavy.html">머스크</a></li>
+								  <li><a href="heavy.html">우드</a></li>
+								</ul>
+							</li>
+						   <li><a href="light.html" class="dp1">가벼운 향수</a>
+						   <ul>
+								  <li><a href="light.html">시트러스</a></li>
+								  <li><a href="light.html">플로럴</a></li>
+								</ul>
+						   </li>
+						   <li><a href="unisex.html" class="dp1">중성적인 향수</a>
+						   <ul>
+								  <li><a href="unisex.html">시트러스</a></li>
+								  <li><a href="unisex.html">머스크</a></li>
+								</ul>
+							 </li>
+						   <li><a href="man.html" class="dp1">남성 향수</a>
+						   <ul>
+								  <li><a href="man.html">시트러스</a></li>
+								  <li><a href="man.html">우드</a></li>
+								  <li><a href="man.html">오리엔탈</a></li>
+								</ul>
+						   </li>
+						   <li><a href="woman.html" class="dp1">여성 향수</a>
+						   <ul>
+								  <li><a href="woman.html">시트러스</a></li>
+								  <li><a href="woman.html">머스크</a></li>
+								  <li><a href="woman.html">플로럴</a></li>
+							   </ul>
+							</li>    
+					   </ul>
+				   </nav> 
+			</header>
+		 </div>
+		 <nav class="jtnb">
+			<ul>
+					<li>회원님 환영합니다</li>
+					<li><a href="p_logout.html">로그아웃</a></li>
+					<li><a href="mypage.html">마이페이지</a></li>
+					<li><a href="getNoticeList2.html">공지사항</a></li>
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="join.html">회원가입</a></li>
+	
+	
+			</ul>
+		</nav>
+	
+	<h2 class="tit">공지사항</h2>
+
+	<table class="tb">
+		<thead>
+			<tr>
+				<th class="item1">번호</th>
+				<th class="item2">제목</th>
+				<th class="item3">작성자</th>
+				<th class="item4">작성일시</th>
+			</tr>
+		</thead>
+		<tbody>		
+
+			<tr>
+				<td class="item1">번호</td>
+				<td class="item2">제목</td>
+				<td class="item3">작성자</td>
+				<td class="item4">작성날짜</td>
+			</tr>	
+</tbody>
+</table>
+<footer class="ft">
+	<div class="ft_wrap">
+<!-- 		<nav class="fnb">
+			<ul>
+				<li><a href="">하단메뉴1</a></li>
+				<li><a href="">하단메뉴2</a></li>
+				<li><a href="">하단메뉴3</a></li>
+				<li><a href="">하단메뉴4</a></li>
+			</ul>
+		</nav>
+		<div class="ft_side">
+			오른쪽 사이드
+		</div> -->
+        <p class="copyright">copyrights 2021. Companyname Co. all rights reserved.</p>
+        <address>경기도 고양시 일산동구 장항동 128</address>
+	</div>	
+</footer>
+	</div>
+</body>
+</html>

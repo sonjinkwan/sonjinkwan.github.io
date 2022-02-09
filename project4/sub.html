@@ -1,0 +1,533 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서브페이지</title>
+    <!--메타포-->
+    <meta name="title" content="국방부 홈페이지">
+    <meta name="keywords" content="국방부">
+    <meta name="description" content="국방부 홈페이지">
+    <!--파비콘-->
+    <link type="image/x-icon" rel="shortcut icon" href="./source/favicon.ico">
+    <!--오픈그래프-->
+    <meta property="og:title" content="국방부 홈페이지">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://mnd.go.kr">
+    <meta property="og:description" content="국방부">
+     <meta property="og:image" content="./source/site_thumb.jpg" />
+    <!--필요한 라이브러리-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--폰트-->
+    <link href="https://fonts.google.com/specimen/Black+Han+Sans?subset=korean#standard-styles" rel="stylesheet">
+    <link rel="stylesheet" href="fonts.css">
+    <!--외부스타일-->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- Hotjar Tracking Code for https://sonjinkwan.github.io/project4/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2800283,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <style>
+    .vs { clear:both; width: 100%; height: 460px; 
+    background-image:url("./source/subpage.png"); background-position:center center; 
+background-repeat: no-repeat; }
+    .content_wrap { clear:both; width: 1200px; margin: 0 auto; margin-top: -150px; }
+    .sub_tit { height: 144px; line-height: 144px; font-size:22px; background-color: #2d6b40; text-align:center; width: 180px; float:left; color:#fff; }
+    .bread_box { height: 119px; background-color: #fff; width: 980px; float:right; padding-left: 30px; padding-top: 24px; border-bottom:1px solid #999; 
+    position:relative; }
+    .cate_tit { color:#999; font-size:24px; }
+    .bread { padding-top:24px; line-height: 1.6; font-size: 16px; }
+    .bread a, .bread span { color:#999; }
+    .bread span.cur { color:#222; font-weight:600;}
+    .sub_tit_ico_box { position:absolute; right:30px; bottom:18px; }
+    .sub_tit_ico_box li { float:left; margin-left:10px; }
+    .sub_tit_ico_box li a { display:block; color:#fff; }
+    .sub_tit_ico_box li a.ico { width: 34px; height: 34px; background-position:center center; background-repeat: no-repeat; border-radius:18px; border:1px solid #ccc; }
+    
+    .sub_tit_ico_box li a.btn { border-radius:18px; padding: 6px 12px; width:auto; background-color: #999; }
+
+    .leftbar { width:190px; float:left; min-height: 100vh; background-color: #f0f0f0; }
+    .lnb { clear:both; }
+    .lnb li { clear:both; margin: 5px 6px; border:1px solid #aaa; line-height: 52px;  }
+    .lnb li a { color:#222; font-size:14px; padding-left:1em; }
+    .lnb li.act a { color:#2b5335; font-size:18px; font-weight:bold; }
+    .page_box { width:980px; float:right; padding-left: 30px; }
+
+    .page { padding-top:40px; overflow:visible; height:auto; min-height:100vh; }
+    .page_wrap {width: 960px; }
+    .page_tit { padding-bottom: 36px; color:#666; }
+    .sub_pic img { display:block; max-width:940px; height:auto;   }
+    .pic_lst { clear: both; }
+    .pic_lst li { float:left; margin-right: 15px; margin-bottom: 15px; }
+    .pic_lst li img { max-width:460px; }
+    .sub_pic_tit { clear:both; font-size:20px; line-height: 1.6; }
+    .sub_pic_com { clear:both; font-size:14px; line-height: 1.6; padding-bottom: 24px; }
+    .sub_full_tit { clear:both; color:#305a4a; line-height: 3; font-size:32px; text-align: center; }
+    .sub_con img { display:block; max-width:940px; }
+    .sub_cate_com { clear:both; padding: 14px;  color:#666; line-height:1.8; 
+    width: 940px; font-weight:300; }
+    .map_area { clear:both; position:relative;     overflow: hidden;
+    width: 940px; }
+    .map_tit, .sub_cate_tit { clear:both; padding-left: 32px; line-height: 2.4; font-size:20px; 
+    background-repeat: no-repeat; background-position:left center; 
+    background-image: url("./source/subpage.png"); color:#134980; }
+
+    #page2, #page3 { padding-top:130px; margin-top: 40px; border-top:5px solid rgb(27, 58, 14); }
+    .onepage { clear:both; width: 50%; padding-top: 50px; padding-bottom: 50px; padding-left:200px;}
+    .onepage img { display:block; width: 100%; }
+    .page { display:none; }
+    .page:target { display:block; }
+    footer{position:relative}
+   footer .ft_logo { margin-left:40px;}
+   footer .footerSecInner{max-width:1200px;margin: 0 auto;box-sizing:border-box;position:relative; overflow:hidden;}
+   footer .footerLinkWrap{border-bottom:1px solid #4d545e;padding:20px 0}
+   footer .footer_nav ul{font-size:0 ; }
+   footer .footer_nav ul li{display:inline-block; vertical-align:middle; font-size:14px; position:relative; }
+   footer .footer_nav ul li a{display:inline-block; padding:0 15px 0 0;color:#222; font-size:15px; font-weight:bold; text-decoration-line: none;}
+   footer .footer_nav ul li a:after{content:"";display:block;width:1px;height:13px;background:#222; position:absolute; top:2px; right:7px;}
+   footer .footer_nav ul li:first-child a{color:#2c57b5}
+   footer .footer_nav ul li:last-child a:after{display:none;}
+   
+   footer address{margin-top:20px; margin-left: 38px; color:rgb(0, 0, 0); font-size: 12px;}
+   footer p{color:rgb(0, 0, 0); margin-left: 38px; font-size: 12px;}
+   
+   footer .logos{ position:absolute; margin-bottom :150px; right:0;}
+   footer .logos ul li{float:left; list-style: none;}
+   footer .logos ul li img,
+   footer .logos ul li span{display:block; float:left;}
+   footer .logos ul li span{padding-top:15px; margin: 0 10px 0 5px; font-weight:bold;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+          <div class="tnb_wrap">
+              <a href="index.html"><img src="./source/logo.png" alt=""></a>
+              <div class="search_wrap">
+                  <form action="search" method="post">
+                      <div class="search_fr">
+                          <input type="text" class="search_btn1" id="keyword" name="keyword" placeholder="검색어를 입력하세요">
+                          <input type="submit" class="search_btn" value="">
+                      </div>
+                  </form>
+              </div>
+              <nav class="tnb">
+                  <ul>
+                      <li><a href=""><img src="./source/eng.png" alt="eng"><span>English</span></a></li>
+                      <li><a href=""><img src="./source/chi.png" alt="chi"><span>Chinese</span></a></li>
+                      
+                  </ul>
+              </nav>
+          </div>
+          </div>
+          <nav class="gnb">
+            <div class="gnb_group nav1">
+                <ul class="l_gnb">
+                    <li class="item1">
+                        <a href="sub.html" class="dp1">정보공개</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="" class="dp2">정보공개제도</a>
+                                <dl class="dep3">
+                                    <dt>정보공개제도</dt>
+                                    <dd><a href="" class="dp3">detail1</a></dd>
+                                    <dd><a href="" class="dp3">detail2</a></dd>
+                                    <dd><a href="" class="dp3">detail3</a></dd>
+                                    <dd><a href="" class="dp3">detail4</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">재정정보공개</a>
+                                <dl class="dep3">
+                                    <dt>재정정보공개</dt>
+                                    <dd><a href="" class="dp3">detail5</a></dd>
+                                    <dd><a href="" class="dp3">detail6</a></dd>
+                                    <dd><a href="" class="dp3">detail7</a></dd>
+                                    <dd><a href="" class="dp3">detail8</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">정책실명제</a>
+                                <dl class="dep3">
+                                    <dt>표준진흥교육</dt>
+                                    <dd><a href="" class="dp3">detail9</a></dd>
+                                    <dd><a href="" class="dp3">detail10</a></dd>
+                                    <dd><a href="" class="dp3">detail11</a></dd>
+                                    <dd><a href="" class="dp3">detail12</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">정보목록</a>
+                                <dl class="dep3">
+                                    <dt>표준보급</dt>
+                                    <dd><a href="" class="dp3">detail13</a></dd>
+                                    <dd><a href="" class="dp3">detail14</a></dd>
+                                    <dd><a href="" class="dp3">detail15</a></dd>
+                                    <dd><a href="" class="dp3">detail16</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">표준개발</a>
+                                <dl class="dep3">
+                                    <dt>표준개발</dt>
+                                    <dd><a href="" class="dp3">detail17</a></dd>
+                                    <dd><a href="" class="dp3">detail18</a></dd>
+                                    <dd><a href="" class="dp3">detail19</a></dd>
+                                    <dd><a href="" class="dp3">detail20</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dp1">민원ㆍ국민참여</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="" class="dp2">민원안내</a>
+                                <dl class="dep3">
+                                    <dt>민원안내</dt>
+                                    <dd><a href="" class="dp3">detail21</a></dd>
+                                    <dd><a href="" class="dp3">detail22</a></dd>
+                                    <dd><a href="" class="dp3">detail23</a></dd>
+                                    <dd><a href="" class="dp3">detail24</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">민원신청</a>
+                                <dl class="dep3">
+                                    <dt>민원신청</dt>
+                                    <dd><a href="" class="dp3">detail25</a></dd>
+                                    <dd><a href="" class="dp3">detail26</a></dd>
+                                    <dd><a href="" class="dp3">detail27</a></dd>
+                                    <dd><a href="" class="dp3">detail28</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">익명신고</a>
+                                <dl class="dep3">
+                                    <dt>익명신고</dt>
+                                    <dd><a href="" class="dp3">detail29</a></dd>
+                                    <dd><a href="" class="dp3">detail30</a></dd>
+                                    <dd><a href="" class="dp3">detail31</a></dd>
+                                    <dd><a href="" class="dp3">detail32</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">제안</a>
+                                <dl class="dep3">
+                                    <dt>제안</dt>
+                                    <dd><a href="" class="dp3">detail33</a></dd>
+                                    <dd><a href="" class="dp3">detail34</a></dd>
+                                    <dd><a href="" class="dp3">detail35</a></dd>
+                                    <dd><a href="" class="dp3">detail36</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">인증심사원</a>
+                                <dl class="dep3">
+                                    <dt>인증심사원</dt>
+                                    <dd><a href="" class="dp3">detail37</a></dd>
+                                    <dd><a href="" class="dp3">detail38</a></dd>
+                                    <dd><a href="" class="dp3">detail39</a></dd>
+                                    <dd><a href="" class="dp3">detail40</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">국방소식</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="" class="dp2">알림</a>
+                                <dl class="dep3">
+                                    <dt>알림</dt>
+                                    <dd><a href="" class="dp3">detail41</a></dd>
+                                    <dd><a href="" class="dp3">detail42</a></dd>
+                                    <dd><a href="" class="dp3">detail43</a></dd>
+                                    <dd><a href="" class="dp3">detail44</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">보도자료</a>
+                                <dl class="dep3">
+                                    <dt>보도자료</dt>
+                                    <dd><a href="" class="dp3">detail45</a></dd>
+                                    <dd><a href="" class="dp3">detail46</a></dd>
+                                    <dd><a href="" class="dp3">detail47</a></dd>
+                                    <dd><a href="" class="dp3">detail48</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">국방뉴스</a>
+                                <dl class="dep3">
+                                    <dt>국방뉴스</dt>
+                                    <dd><a href="" class="dp3">detail49</a></dd>
+                                    <dd><a href="" class="dp3">detail50</a></dd>
+                                    <dd><a href="" class="dp3">detail51</a></dd>
+                                    <dd><a href="" class="dp3">detail52</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">국방컨텐츠</a>
+                                <dl class="dep3">
+                                    <dt>국방컨텐츠</dt>
+                                    <dd><a href="" class="dp3">detail53</a></dd>
+                                    <dd><a href="" class="dp3">detail54</a></dd>
+                                    <dd><a href="" class="dp3">detail55</a></dd>
+                                    <dd><a href="" class="dp3">detail56</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">언론보도바로보기</a>
+                                <dl class="dep3">
+                                  <dt>언론보도바로보기</dt>
+                                  <dd><a href="" class="dp3">detail57</a></dd>
+                                  <dd><a href="" class="dp3">detail58</a></dd>
+                                  <dd><a href="" class="dp3">detail59</a></dd>
+                                  <dd><a href="" class="dp3">detail60</a></dd>
+                              </dl>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>  
+            <div class="gnb_group nav2">
+                <ul class="r_gnb">
+                    <li class="item1">
+                        <a href="" class="dp1">국방정책</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="" class="dp2">국정과제</a>
+                                <dl class="dep3">
+                                    <dt>국정과제</dt>
+                                    <dd><a href="" class="dp3">detail49</a></dd>
+                                    <dd><a href="" class="dp3">detail50</a></dd>
+                                    <dd><a href="" class="dp3">detail51</a></dd>
+                                    <dd><a href="" class="dp3">detail52</a></dd>
+                                    <dd><a href="" class="dp3">detail53</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">한미 안보협력</a>
+                                <dl class="dep3">
+                                    <dt>한미 안보협력</dt>
+                                    <dd><a href="" class="dp3">detail54</a></dd>
+                                    <dd><a href="" class="dp3">detail55</a></dd>
+                                    <dd><a href="" class="dp3">detail56</a></dd>
+                                    <dd><a href="" class="dp3">detail57</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">국방 외교협력</a>
+                                <dl class="dep3">
+                                    <dt>국방 외교협력</dt>
+                                    <dd><a href="" class="dp3">detail58</a></dd>
+                                    <dd><a href="" class="dp3">detail59</a></dd>
+                                    <dd><a href="" class="dp3">detail60</a></dd>
+                                    <dd><a href="" class="dp3">detail61</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">병역제도</a>
+                                <dl class="dep3">
+                                    <dt>병역제도</dt>
+                                    <dd><a href="" class="dp3">detail62</a></dd>
+                                    <dd><a href="" class="dp3">detail63</a></dd>
+                                    <dd><a href="" class="dp3">detail64</a></dd>
+                                    <dd><a href="" class="dp3">detail65</a></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <a href="" class="dp2">국방예산</a>
+                                <dl class="dep3">
+                                    <dt>국방예산</dt>
+                                    <dd><a href="" class="dp3">detail66</a></dd>
+                                    <dd><a href="" class="dp3">detail67</a></dd>
+                                    <dd><a href="" class="dp3">detail68</a></dd>
+                                    <dd><a href="" class="dp3">detail69</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">국방부 소개</a>
+                        <ul class="sub">
+                          <li>
+                              <a href="" class="dp2">국방부 소개</a>
+                              <dl class="dep3">
+                                  <dt>국방부 소개</dt>
+                                  <dd><a href="" class="dp3">detail70</a></dd>
+                                  <dd><a href="" class="dp3">detail71</a></dd>
+                                  <dd><a href="" class="dp3">detail72</a></dd>
+                                  <dd><a href="" class="dp3">detail73</a></dd>
+                                  <dd><a href="" class="dp3">detail74</a></dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <a href="" class="dp2">장관</a>
+                              <dl class="dep3">
+                                  <dt>장관</dt>
+                                  <dd><a href="" class="dp3">detail75</a></dd>
+                                  <dd><a href="" class="dp3">detail76</a></dd>
+                                  <dd><a href="" class="dp3">detail77</a></dd>
+                                  <dd><a href="" class="dp3">detail78</a></dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <a href="" class="dp2">차관</a>
+                              <dl class="dep3">
+                                  <dt>차관</dt>
+                                  <dd><a href="" class="dp3">detail79</a></dd>
+                                  <dd><a href="" class="dp3">detail80</a></dd>
+                                  <dd><a href="" class="dp3">detail81</a></dd>
+                                  <dd><a href="" class="dp3">detail82</a></dd>
+                              </dl>
+                          </li>
+                          <li>
+                              <a href="" class="dp2">조직 및 직원 안내</a>
+                              <dl class="dep3">
+                                  <dt>병역제도</dt>
+                                  <dd><a href="" class="dp3">detail83</a></dd>
+                                  <dd><a href="" class="dp3">detail84</a></dd>
+                                  <dd><a href="" class="dp3">detail85</a></dd>
+                                  <dd><a href="" class="dp3">detail86</a></dd>
+                              </dl>
+                          </li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>      
+        </nav>  
+    </header>
+    <div class="content fix">
+        <figure class="vs" id="vs">
+            <!-- 배경 이미지로 채움 -->
+        </figure>
+        <div class="content_wrap">
+            <div class="sub_box">
+                <h2 class="sub_tit">정보공개</h2>
+                <div class="bread_box">
+                    <p class="bread"><a href="" class="home">정보공개</a> &gt; <a href="">정보공개제도</a> &gt; <span class="cur">제도 안내</span></p>
+                    <ul class="sub_tit_ico_box">
+                        <li><a href="" class="ico item1"></a></li>
+                        <li><a href="" class="ico item2"></a></li>
+                        <li><a href="" class="btn">정보수정요청</a></li>
+                    </ul>
+                </div>
+            </div>
+            <aside class="leftbar">
+                <nav class="lnb">
+                    <ul>
+                        <li class="act"><a href="#page1">정보공개제도</a></li>
+                        <li><a href="#page2">사전 정보공표</a></li>
+                        <li><a href="#page3">업무추진비</a></li>
+                        <li><a href="#page4">정보목록</a></li>
+                        <li><a href="#page5">정보공개 청구</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="page_box">
+                <section class="onepage">
+                    <h2 class=""></h2>
+                    <img src="./source/subtool.png" alt="서브이미지"><br>
+                </section>
+                <section class="page" id="page1">
+                    <div class="page_wrap">
+                        <figure class="sub_pic">
+                            <img src="./source/subimg1.png" alt="정보공개제도">
+                        </figure>
+                    </div>    
+                </section>    
+                <section class="page" id="page2">
+                    <div class="page_wrap">
+                        <figure class="sub_pic">
+                            <img src="./source/subimg2.png" alt="사전 정보공표">
+                        </figure>
+                    </div>    
+                </section>
+                <section class="page" id="page3">
+                    <div class="page_wrap">
+                        <figure class="sub_pic">
+                            <ul class="course_lst">
+                                <li><img src="./source/subimg3.png" alt="업무추진비"></li>
+                            </ul>
+                        </figure>
+                    </div>    
+                </section>
+                <section class="page" id="page4">
+                        <div class="page_wrap">
+                            <figure class="sub_pic">
+                                <ul class="course_lst">
+                                    <li>
+                                        <img src="./source/subimg4.png" alt="정보목록">
+                                    </li>
+                                </ul>
+                            </figure>
+                        </div>    
+                </section>
+                <section class="page" id="page5">
+                        <div class="page_wrap">
+                            <figure class="sub_pic">
+                                <ul class="course_lst">
+                                    <li>
+                                        <img src="./source/subimg5.png" alt="정보공개 청구">
+                                    </li>
+                                </ul>
+                            </figure>
+                        </div>    
+                </section>
+            </div>
+        </div>    
+    </div>
+    <footer> 
+        <div class="ft">
+               <div class="footerSecInner">
+                <nav class="sns_logo">
+                  <ul>
+                      <li class="item1"><a href=""></a></li>
+                      <li class="item2"><a href=""></a></li>
+                      <li class="item3"><a href=""></a></li>
+                      <li class="item4"><a href=""></a></li>
+                      <li class="item5"><a href=""></a></li>
+                  </ul>
+                </nav>
+                </div>
+                <div class="ft_sector">
+                 <div class="ft_logo"><img src="./source/f-logo.png" alt="하단로고"></div>
+                 <div class="nav_add">
+                 <nav class="footer_nav">
+                 <ul>
+                  <li><a href="">개인정보처리방침</a></li>
+                  <li><a href="">찾아오시는 길</a></li>
+                  <li><a href="">담당자 연락처</a></li>
+                  <li><a href="">사업자등록증·계좌안내</a></li>
+                  <li><a href="">전자세금계산 확인</a></li>
+                  <li><a href="">대금지급조회서비스</a></li>
+                  </ul>
+                  </nav>
+               <address><span>[04383]</span>서울특별시 용산구 이태원로 22 <span>전화상담 1577-9090 (유료) 팩스 02) 748-6895</span></address>
+                <p class="p_2">Copyright(c) KOREAN ARMY<span>All Rights Reserved.</span></p>
+               <!--카피라이트-->
+               </div> 
+               <div class="logos">
+               <ul>
+                <li><img src="./source/f-mark.png" alt="로고2" /><span>인적자원개발우수기관</span></li>
+                <li><img src="./source/web-mark.png" alt="로고3"></li>
+              </ul>
+              </div>
+            </div>
+           </div>
+         </footer> 
+</div>
+</body>
+</html>

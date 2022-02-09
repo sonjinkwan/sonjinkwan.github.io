@@ -1,0 +1,90 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>관리자 - 상품관리</title>
+</head>
+<body>
+	<!-- 헤더 -->
+	<style> 
+		header { text-align: center; margin-top: 20px;}
+		.tnb { position: absolute; right:50px; top: 20px; }
+		.gnb li { display: inline-block; margin-top: 50px; }
+		</style>
+		<header>
+		<h3>관리자 페이지</h3>
+				<a href="admin.jsp" class="logo">
+				<img src="./img/logo.png" alt="로고" />
+			</a>
+			<nav class="gnb">
+				<ul>
+					<li><a href="getMemberList.html">회원관리</a></li>
+					<li><a href="getProductList.html">제품관리</a></li>
+					<li><a href="getNoticeList.html">게시판 관리</a></li>
+				</ul>
+			</nav>
+			<nav class="tnb">
+				<ul>
+					<li><a href="admin_logout.html">관리자 로그아웃</a></li>
+				</ul>
+			</nav>
+		</header>
+	<h1>상품 등록</h1>
+
+	<!-- 상품 등록 폼 -->
+	<form action="insertProductPro.jsp" class="frm" method="post" name="pform" >
+	<table>
+		<tr>
+		<th class="item_name">
+			<label for="pname">상품이름</label>		
+		</th>			
+			<td class="item_val">	
+				<input type="text" name="p_num" id="p_num" class="indata" placeholder="" />
+				<input type="button" value="상품코드 중복체크" class="in_btn" onclick="codeCheck()" />
+				<input type="hidden" value="" name="codeck" id="codeck" />		
+			</td>
+		</tr>
+		<tr>
+			<th class="item_name">
+				<label for="pinfo">상품설명</label>
+		</th>
+			<td class="item_val">
+			<input type="text" name="pinfo" id="pinfo" class="in_data" placeholder=""/>
+			</td>
+		</tr>
+
+		<tr>
+			<th class="item_name">
+			<label for="p_img">수량</label>
+			</th>
+			<td class="item_val">
+			<input type="text" name="p_cnt" id="p_cnt" class="in_data" placeholder=""/>
+			</td>
+		</tr>
+		<tr>
+			<th class="item_name">
+			<label for="pimg">상품 이미지</label>
+			</th>
+			<td class="item_val">
+			<input type="file" name="pimg" id="pimg" class="in_data" placeholder=""/>
+			<input type="button" value="이미지 중복체크" class="in_btn" onclick="codeCheck()" />
+			<input type="hidden" value="" name="imgck" id="imgck" />
+			</td>
+		</tr>		
+	</table>
+	<input type="submit" value="상품등록" class="inbtn">
+		<input type="reset"  value="취소" class="inbtn"/>
+	</form>
+	<script>
+		function codeCheck(){
+			window.open("codeCheckform.jsp","pcodecheck","width=300, hieght=300");
+		}
+		function imgCheck(){
+			window.open("imgCheckform.jsp","pcodecheck","width=300, hieght=300");
+		}
+		</script>
+	<!-- 푸터 -->
+</body>
+</html>

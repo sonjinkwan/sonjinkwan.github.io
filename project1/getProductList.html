@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제품목록</title>
+<style>
+.tit { text-align:center; }
+table { display:table; border-collapse:collapse; }
+tr { display:table-row; }
+th, td { display:table-cell; }
+.tb { width:1000px; margin:20px auto; }
+.tb th, .tb td { line-height:36px; border-bottom:1px solid #333; }
+.tb th { border-top:2px solid #333; background:#fff; }
+.tb tbody tr:nth-child(2n) td { background:#fff; }
+.btn_wrap { width: 220px; margin: 20px auto; }
+.btn_wrap .in_btn { display: block; width: 80px; margin: 15px; background-color: #333; color: #fff; 
+	text-align: center; border: 0; outline: 0; float: left; line-height: 38px; }
+	.btn_wrap .in_btn:hover { background-color:green; }
+</style>
+</head>
+<body>
+<div class="wrap">
+	<style> 
+		header { text-align: center; margin-top: 20px;}
+		.tnb { position: absolute; right:50px; top: 20px; }
+		.gnb li { display: inline-block; margin-top: 50px; }
+		</style>
+		<header>
+		<h3>관리자 페이지</h3>
+				<a href="admin.html" class="logo">
+				<img src="./img/logo.png" alt="로고" />
+			</a>
+			<nav class="gnb">
+				<ul>
+					<li><a href="getMemberList.html">회원관리</a></li>
+					<li><a href="getProductList.html">제품관리</a></li>
+					<li><a href="getNoticeList.html">게시판 관리</a></li>
+				</ul>
+			</nav>
+			<nav class="tnb">
+				<ul>
+					<li><a href="admin_logout.html">관리자 로그아웃</a></li>
+				</ul>
+			</nav>
+		</header>
+<h2 class="tit">제품목록</h2>
+<form action="deleteProductCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)">
+	<table class="tb">
+		<thead>
+			<tr>
+				<th>제품 번호</th>
+				<th>제품 이름</th>
+				<th>제품 가격</th>
+				<th>제품 수량</th>
+				<th>제품 사진</th>
+				<th>편집</th>
+			</tr>
+		</thead>
+
+	<tbody>
+		<tr>
+			<td><a href="editProductForm.html">제품번호</td>
+			<td>제품 이름</td>
+			<td>제품 가격</td>
+			<td>제품 수량</td>
+			<td><img src='' alt=""></td>
+			<td><input type="checkbox" name="ck" id="" value="" class="ck_item"/></td>	
+		</tr>
+
+		</tbody>
+	</table>
+	<hr />
+	<div class="btn_wrap">
+			<button type="submit" class="in_btn" onclick="">삭제</button>
+	<button type="reset" class="in_btn" onclick="">취소</button>
+	<a href="addProductForm.html">제품 추가</a>
+	</div>
+	</form>
+	<script>
+	function frm_submit(f){
+		var sel ='input[name="ck"]:checked';
+		var item = document.querySelectorAll(sel);
+		var cnt = item.length;
+		if(cnt==0){
+			alert("삭제할 요소를 선택하지 않았습니다");
+			return false;
+		} else {
+			var qt = confirm("정말로 삭제하시겠습니까?");
+			if(qt){
+				f.submit();
+			} else {
+				return false;
+			}
+		}
+	}
+	</script>
+	</div>
+</body>
+</html>

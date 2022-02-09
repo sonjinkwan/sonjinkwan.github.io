@@ -1,0 +1,28 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 헤더 영역 */
+body { font-family: 'MapoFlowerIsland'; }
+.hd { clear:both; width: 100%; height: 80px; padding-bottom: 20px; }
+.tnb { float:inherit; margin-right:20px; padding-left: 10px; }
+.tnb ul { display:block; padding-left: 20px;}
+.tnb li { float:left; margin:5px; }
+.tnb li a { color:#333; font-size:12px; font-weight: lighter; }
+.logo { display: block; margin: 0 auto; }
+
+.gnb { width:1000px; margin:20px auto; }
+.menu { clear:both; }
+.gnb li { float: left; margin:0 auto; width: 170px; text-align:center; position: relative; }
+.gnb li a { color: #333; font-size: 18px; background-color: #fff; display: block; line-height: 42px;}
+.gnb ul li ul { position : absolute; width : 170px; margin:0 auto; visibility:hidden; opacity:0; transition:0.5s; background-color: #fcf2ff; }
+.gnb ul li:hover ul { margin: 0 auto; visibility: visible; opacity:1; }
+.gnb li ul li a { font-size: 14px; margin:0 auto; background : none; }
+
+/* 푸터 영역 */
+.ft { clear:both; width: 100%; background-color: #222; 
+color:#fff; height: 80px; padding-top: 20px; }
+.ft_wrap { width: 1000px; margin: 0 auto;  } 

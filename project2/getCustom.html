@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>공지사항 글 보기</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/main.css">
+
+<meta charset="UTF-8">
+<title>헤더</title>
+
+
+<div>
+   <a href="admin_index.html"><img src="./img/logo.png" alt="" class="logo" /></a>
+   <div class="wrap">
+      <header class="hd">
+         <nav class="gnb">
+                  <ul>
+                  	  <li><a href="admin.html" class="dp1">관리자 페이지</a></li>
+                      <li><a href="getGarmentList.html" class="dp1">제품관리</a></li>
+                      <li><a href="GetCustomList.html" class="dp1">회원관리</a></li>  
+                      <li><a href="GetQnaList.html" class="dp1">게시판관리</a></li> 
+                      <li><a href="admin_index.html" class="dp1">메인페이지</a></li>  
+                  </ul>
+              </nav>
+              <div>
+
+			<span>관리자님 환영합니다</span>
+			
+	
+
+</div>
+     </header>
+    </div>
+    </div>
+ 
+<form action="" method="post" name="frm">
+	<table class="table">
+			<tr>
+			<th class="item1">회원 아이디</th>
+			<td>wls123</td>
+			<input type="hidden" name="cid" value="<%=custom.getCid() %>" />
+			</tr>
+			<tr>
+			<th class="item2">회원 비밀번호</th>
+			<td><textarea name="cpw" id="cpw" cols="30" rows="1">1234</textarea></td>
+			</tr>
+			<tr>
+			<th class="item3">회원 이름</th>
+			<td><textarea name="cname" id="cname" cols="30" rows="1">손징간</textarea></td>
+			</tr>
+			<tr>
+			<th class="item4">회원 우편번호</th>
+			<td><textarea name="czip" id="czip" cols="30" rows="1">10256</textarea></td>
+			</tr>
+			<tr>
+			<th class="item5">회원 주소</th>
+			<td><textarea name="caddr1" id="caddr1" cols="30" rows="1">경기도 고양시</textarea></td>
+			</tr>
+			<tr>
+			<th class="item5">상세주소</th>
+			<td><textarea name="caddr2" id="caddr2" cols="30" rows="1">스위트홈</textarea></td>		
+			</tr>
+			<tr>
+			<th class="item5">회원 전화번호</th>
+			<td><textarea name="ctel" id="ctel" cols="30" rows="1">0102394014</textarea></td>
+			</tr>
+			<tr>
+			<th class="item5">회원 이메일</th>
+			<td><textarea name="cemail" id="cemail" cols="30" rows="1">wls@naver.com</textarea></td>
+			</tr>
+			<tr>
+			<th class="item5">회원 생년월일</th>
+			<td><textarea name="cbirth" id="cbirth" cols="30" rows="1">19931223</textarea></td>
+			</tr>
+</table>
+		<div class="btn-group">
+			<input type="submit" class="btn btn-default" value="회원정보 수정" />
+			<a href="getCustomList.html" class="btn btn-default">회원 목록</a>
+			<a href="DeleteCustomCtrl?cid=<%=custom.getCid() %>" class="btn btn-default">회원 탈퇴</a>
+		</div>
+	</form>
+</body>
+</html>

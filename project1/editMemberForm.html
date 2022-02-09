@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>관리자 회원 수정</title>
+<style>
+.tit { padding-top:50px; line-height:50px; text-align:center; }
+table { display:table; border-collapse:collapse; }
+tr { display:table-row; }
+th, td { display:table-cell; }
+.tb { width:600px; margin:20px auto; }
+.tb th, .tb td { line-height:42px; border-bottom:1px solid #333; }
+.tb th { background:#E1E1E1; }
+.tb tr:first-child th, .tb tr:first-child td { border-top:1px solid #333; } 
+.in_data { display:block; line-height:32px; height:32px; margin-left:10px; padding-left:5px; width:240px; }
+.btn_wrap { width:220px; margin:20px auto; }
+.btn_wrap .in_btn { display:block; width:80px; margin:15px; background-color:#333; color:#fff; 
+text-align:center; border:0; outline:0; float:left; line-height:38px; }
+.btn_wrap .in_btn:hover { background-color:#E1E1E1; }
+.in_comment { padding-left:18px; }
+input[readonly] { background:#f1f1f1; }
+</style>
+</head>
+<body>
+   <style> 
+      header { text-align: center; margin-top: 20px;}
+      .tnb { position: absolute; right:50px; top: 20px; }
+      .gnb li { display: inline-block; margin-top: 50px; }
+      </style>
+      <header>
+      <h3>관리자 페이지</h3>
+            <a href="admin.html" class="logo">
+            <img src="./img/logo.png" alt="로고" />
+         </a>
+         <nav class="gnb">
+            <ul>
+               <li><a href="getMemberList.html">회원관리</a></li>
+               <li><a href="getProductList.html">제품관리</a></li>
+               <li><a href="getNoticeList.html">게시판 관리</a></li>
+            </ul>
+         </nav>
+         <nav class="tnb">
+            <ul>
+               <li><a href="admin_logout.html">관리자 로그아웃</a></li>
+            </ul>
+         </nav>
+      </header>
+<h2 class="tit">상세 회원 정보 수정</h2>
+<form action="" method="post" id="frm" name="frm">
+   <table class="tb">
+      <tbody>
+         <tr>
+            <th class="col_hd">
+               <label for="uid">아이디</label>
+            </th>
+            <td class="col_data">
+               <input type="text" id="uid" name="uid" class="in_data" value="아이디" readonly required />
+            </td>
+         </tr>
+         <tr>
+            <th class="col_hd">
+               <label for="upw" >비밀번호</label>
+            </th>
+            <td class="col_data">
+               <input type="password" id="upw" name="upw" class="in_data" value="비밀번호" readonly />
+            </td>
+         </tr>
+         <tr>
+            <th class="col_hd">
+               <label for="uname">회원명</label>
+            </th>
+            <td class="col_data">
+               <input type="text" id="uname" name="uname" class="in_data" value="이름" />
+            </td>
+         </tr>
+         <tr>
+            <th class="col_hd">
+               <label for="uemail">출생년도</label>
+            </th>
+            <td class="col_data">
+               <input type="text" id="uemail" name="uemail" class="in_data" value="생년월일"/>
+            </td>
+         </tr>
+         <tr>
+            <th class="col_hd">
+               <label for="utel">전화번호</label>
+            </th>
+            <td class="col_data">
+               <input type="text" id="utel" name="utel" class="in_data" value="전화번호"/>
+            </td>
+         </tr>
+         <tr>
+            <th class="col_hd">
+               <label for="uzip">우편번호</label>
+            </th>
+            <td class="col_data">
+               <input type="text" id="uzip" name="uzip" class="in_data" value="우편번호"/>
+            </td>
+         </tr>
+        <tr>
+            <th class="col_hd">
+               <label for="uadd1">주소</label>
+            </th>
+            <td class="col_data">
+               <input type="text" id="uadd1" name="uadd1" class="in_data" value="주소"/>
+            </td>
+         </tr>
+         <tr>
+            <th class="col_hd">
+               <label for="uadd2">상세주소</label>
+            </th>
+            <td class="col_data">
+               <input type="text" id="uadd2" name="uadd2" class="in_data" value="상세주소"/>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+    <hr />
+   <div class="btn_wrap">   
+      <button type="submit" class="in_btn" onclick="">수정</button>
+      <button type="reset" class="in_btn" onclick="">취소</button>
+   </div>   
+</form>
+</body>
+</html>

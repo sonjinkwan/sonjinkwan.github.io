@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-latest.js"></script>
+<link rel="stylesheet" href="datatables.min.css" />
+<script src="/datatables.min.js"></script>
+<script src="/masonry.pkgd.js"></script>
+</head>
+<body>
+<div class="container">
+	
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/main.css">
+
+<meta charset="UTF-8">
+<title>헤더</title>
+
+
+<div>
+   <a href="admin_index.html"><img src="./img/logo.png" alt="" class="logo" /></a>
+   <div class="wrap">
+      <header class="hd">
+         <nav class="gnb">
+                  <ul>
+                  	  <li><a href="admin.html" class="dp1">관리자 페이지</a></li>
+                      <li><a href="getGarmentList.html" class="dp1">제품관리</a></li>
+                      <li><a href="GetCustomList.html" class="dp1">회원관리</a></li>  
+                      <li><a href="GetQnaList.html" class="dp1">게시판관리</a></li> 
+                      <li><a href="admin_index.html" class="dp1">메인페이지</a></li>  
+                  </ul>
+              </nav>
+              <div>
+
+			<span>관리자님 환영합니다</span>
+			
+	
+
+</div>
+     </header>
+    </div>
+    </div>
+ 
+	<div class="content">
+		<h2 class="tit">판매 목록</h2>
+		<div class="paylist_area">
+			<table id="flex" class="table">
+				<thead>
+					<tr>
+						<th>결제 아이디</th>
+						<th>상품 수량</th>
+						<th>결제 은행</th>
+						<th>결제 코드</th>
+						<th>결제 날짜</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr>
+						<td>
+							<span>wls123</span>
+						</td>
+						<td>2</td>
+						<td>신한은행</td>
+						<td>10395</td>
+						<td>2022/01/02></td>
+					</tr>
+				</tbody>
+	
+			</table>
+		<script>
+ 		$(function(){
+			$("#flex").DataTable();	
+		}); 
+		</script>
+		</div>
+	</div>
+</body>
+</html>

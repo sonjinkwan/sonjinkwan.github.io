@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 목록</title>
+<script src=""></script>
+<style>
+.tit { text-align:center; }
+table { display:table; border-collapse:collapse; }
+tr { display:table-row; }
+th, td { display:table-cell; }
+.tb { width:1300px; margin:20px auto; }
+.tb th, .tb td { line-height:36px; border-bottom:1px solid #333; }
+.tb th { border-top:2px solid #333; background:#fff; }
+.tb tbody tr:nth-child(2n) td { background:#fff; }
+.btn_wrap { position: absolute; bottom: 10px; left: 850px; }
+.btn_wrap .in_btn { display: block; width: 80px; margin: 15px; background-color: #333; color: #fff; 
+	text-align: center; border: 0; outline: 0; float:left; line-height: 38px; }
+	.btn_wrap .in_btn:hover { background-color:green; }
+</style>
+</head>
+<body>
+<div class="wrap">
+	<style> 
+		header { text-align: center; margin-top: 20px;}
+		.tnb { position: absolute; right:50px; top: 20px; }
+		.gnb li { display: inline-block; margin-top: 50px; }
+		</style>
+		<header>
+		<h3>관리자 페이지</h3>
+				<a href="admin.html" class="logo">
+				<img src="./img/logo.png" alt="로고" />
+			</a>
+			<nav class="gnb">
+				<ul>
+					<li><a href="getMemberList.html">회원관리</a></li>
+					<li><a href="getProductList.html">제품관리</a></li>
+					<li><a href="getNoticeList.html">게시판 관리</a></li>
+				</ul>
+			</nav>
+			<nav class="tnb">
+				<ul>
+					<li><a href="admin_logout.html">관리자 로그아웃</a></li>
+				</ul>
+			</nav>
+		</header>
+	<h2 class="tit">회원정보</h2>
+	<table class="tb">
+		<thead>
+			<tr>
+				<th class="item1">아이디</th>
+				<th class="item2">비밀번호</th>
+				<th class="item3">이름</th>
+				<th class="item4">이메일</th>
+				<th class="item5">전화번호</th>
+				<th class="item5">우편번호</th>
+				<th class="item5">주소</th>
+				<th class="item5">상세주소</th>
+			</tr>
+		</thead>
+		<tbody>		
+<form action="deleteMemberCtrl" method="post" name="delForm" onsubmit="return frm_submit(this)" >	
+	<tr class="lst">
+		<td class="item1"><a href="editMemberForm.html">아이디</a></td>
+		<td>비밀번호</td>
+		<td>이름</td>
+		<td>이메일</td>
+		<td>전화번호</td>
+		<td>우편번호</td>
+		<td>주소</td>
+		<td>상세주소</td>
+		<td>
+		<input type="checkbox" name="ck" id="ck<%=i %>" class="ck_item" value="<%=mem.getM_id() %>" />
+		</td>
+	</tr>
+<hr />
+<div class="btn_wrap">
+	<button type="submit" class="in_btn" onclick="">삭제</button>
+	<button type="reset" class="in_btn" onclick="">취소</button>
+	</div>
+	</form>
+	<script>
+	function frm_submit(f) {
+		var sel = 'input[name="ck"]:checked';
+		var item = document.querySelectorAll(sel);
+		var cnt = item.length;
+		if(cnt==0){
+			alert("삭제할 요소를 선택하지 않았습니다.");
+			return false;
+		} else {
+			var qt = confirm("정말로 삭제 하시겠습니까?");
+			if(qt){
+				f.submit();
+			} else {
+				return false;
+			}
+		}
+	}
+	</script>
+	</div>
+</body>
+</html>

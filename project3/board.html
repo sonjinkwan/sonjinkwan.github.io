@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 파비콘 설정 -->
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+<!-- 메타포 설정 -->
+<meta name="title" content="강릉관광 홈페이지">
+<meta name="keywords" content="강릉관광">
+<meta name="description" content="강릉관광 홈페이지">
+<!-- 오픈그래프 설정 -->
+<meta property="og:title" content="강릉관광 홈페이지">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://tour.gangneung.go.kr">
+<meta property="og:description" content="강릉관광">
+<meta property="og:image" content="./source/site_thumb.jpg" />
+<!-- 폰트 로딩 -->
+<link href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet" type="text/css">
+<!-- 필수 API 로딩 -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="js/js/owl.carousel.js"></script>
+<script src="js/js/datatables.min.css"></script>
+<script src="js/js/datatables.min.js"></script>
+<!-- 외부 스타일 연결 -->
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/grid.css">
+<link rel="stylesheet" href="/css/owl.carousel.css">
+<style>
+	h2 { text-align: center; padding-top: 250px; }
+	.blank { clear:both; float:none; width:100%; height:60px; } 
+	.dataTables_wrapper { width : 1200px; margin: 100px auto; }
+	table.dataTable tbody th, table.dataTable tbody td { text-align: center; }
+	.btn { display:block; line-height:32px; width:50px; padding: 5px 40px; margin: 30px auto;
+	background-color:black; color:#fff; text-align: center; cursor:pointer; }
+	table {
+     margin-left: 400px;   
+      width: 50%;
+      border: 3px solid #444444;
+      border-collapse:separate;
+      text-align: center;
+    }
+    th, td {
+      border: 1px solid #444444;
+      padding: 10px;}
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <body>
+            <div class="wrap">
+                <div class="wrap">
+                    <header class="hd_fix">
+                        <div class="hd_wrap">
+                            <a class="logo" href="index.html">
+                                <img src="/img/logo.png" alt="로고">
+                                <h2 class="logo_tit">관광문화</h2>
+                            </a>
+                            <nav class="tnb">
+                                    <ul>
+                                    
+                                    <li><a href="login.html">로그인</a></li>
+                                    <li><a href="join.html">회원가입</a></li>
+                                    <li><a href="board.html">게시판</a></li>
+                                    <li><a href="mypage.html">마이페이지</a></li>
+                                    <li><a href="">게시판 관리</a></li>
+                                    <li><a href="">회원 관리</a></li>
+                                    
+                                </ul>
+                                </nav>
+                                <nav class="gnb">
+                                    <ul>   
+                                        <li>
+                                            <a href="theme.html" class="dp1">테마여행</a>
+                                            <ul class="sub">
+                                                <li><a href="theme1.html">추천여행코스</a></li>
+                                                <li><a href="theme2.html">강릉 HOT PLACE </li>
+                                                <li><a href="theme3.html">강릉길여행</a></li>
+                                                <li><a href="theme4.html">해양관광의 도시</a></li>
+                                                <li><a href="theme5.html">가상관광</a></li>
+                                                <li><a href="theme6.html">웰니스관광</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="attraction.html" class="dp1">관광명소</a>
+                                            <ul class="sub">
+                                                <li><a href="sub.html">TV속 강릉</a></li>
+                                                <li><a href="">자연관광</a></li>
+                                                <li><a href="attraction3.html#page3">문화관광</a></li>
+                                                <li><a href="attraction4.html#page4">레저ㆍ체험</a></li>
+                                                <li><a href="attraction5.html#page5">축제</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="beach.html" class="dp1">해수욕장</a>
+                                            <ul class="sub">
+                                                <li><a href="beach.html#page1">해변 20개소</a></li>  
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="tourinfo.html" class="dp1">관광안내</a>
+                                            <ul class="sub">
+                                                <li><a href="info1.html">공지사항</a></li>
+                                                <li><a href="info2.html">음식</a>   </li>
+                                                <li><a href="info3.html">숙박</a>  </li>
+                                                <li><a href="info4.html">관광 홍보물 및 신청</a></li>
+                                                <li><a href="info5.html">문화관광 해설 예약</a></li>
+                                                <li><a href="info6.html">교통정보</a></li>
+                                                <li><a href="info7.html">관광안내소</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="now.html" class="dp1">강릉은지금</a>
+                                            <ul class="sub">
+                                                <li><a href="now1.html">생활관광</a></li>
+                                                <li><a href="now2.html">모바일스탬프투어</a></li>
+                                                <li><a href="now3.html">외국인 관광 택시</a></li>
+                                                <li><a href="now4.html">강릉서핑</a></li>
+                                                <li><a href="now5.html">강릉여행영상</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </header>
+        <h2 class="title">게시판 목록</h2>
+    
+        <table class="table" id="data">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>작성일자</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${list}" var="row">
+                <tr>
+                    <td>1</td>
+                    <td><a href="">공지사항</a></td>
+                    <td>관리자</td>
+                    <td>
+                        2022/03/12
+                    </td>
+                    <td>21</td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+                <a href="${path}/board/writer_page.do" class="btn">글쓰기</a>
+                <footer class="ft fix">
+        
+                    <div class="ft_wrap">
+                        <nav class="fnb">
+                            <ul>
+                                <li><a href="">개인정보처리방침</a></li>
+                                <li><a href="">이메일무단수집거부</a></li>
+                                <li><a href="">저작권정책</a></li>
+                                <li><a href=""><img src="/img/location_button.png" alt="sns" class="sns"></a></li>
+                                <li><a href="">관련사이트</a></li>
+                            </ul>
+                        </nav>
+                        <div class="copyright">
+                            <p class="addr">[25522] 강원도 강릉시 강릉대로 33 (홍제동) Tel : 033-640-5420</p>
+                            <p class="copy">Copyright ⓒ 2017 Gangneung-si. All Rights Reserved.</p>
+                        </div><br><br>
+                        
+                </footer>
+    </div>
+        <script>
+            $( document ).ready(function() {
+                $("#data").DataTable();
+            });
+        </script>
+    </body>
+    </html>
+

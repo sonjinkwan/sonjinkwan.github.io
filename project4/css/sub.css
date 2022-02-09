@@ -1,0 +1,69 @@
+
+.vs { clear:both; width: 100%; height: 460px; 
+background-image:url("./source/subpage.png"); background-position:center center; 
+background-repeat: no-repeat; }
+.content_wrap { clear:both; width: 1200px; margin: 0 auto; margin-top: -150px; }
+.sub_tit { height: 144px; line-height: 144px; font-size:22px; background-color: #2d6b40; text-align:center; width: 180px; float:left; color:#fff; }
+.bread_box { height: 119px; background-color: #fff; width: 980px; float:right; padding-left: 30px; padding-top: 24px; border-bottom:1px solid #999; 
+position:relative; }
+.cate_tit { color:#999; font-size:24px; }
+.bread { padding-top:24px; line-height: 1.6; font-size: 16px; }
+.bread a, .bread span { color:#999; }
+.bread span.cur { color:#222; font-weight:600;}
+.sub_tit_ico_box { position:absolute; right:30px; bottom:18px; }
+.sub_tit_ico_box li { float:left; margin-left:10px; }
+.sub_tit_ico_box li a { display:block; color:#fff; }
+.sub_tit_ico_box li a.ico { width: 34px; height: 34px; background-position:center center; background-repeat: no-repeat; border-radius:18px; border:1px solid #ccc; }
+
+.sub_tit_ico_box li a.btn { border-radius:18px; padding: 6px 12px; width:auto; background-color: #999; }
+
+.leftbar { width:190px; float:left; min-height: 100vh; background-color: #f0f0f0; }
+.lnb { clear:both; }
+.lnb li { clear:both; margin: 5px 6px; border:1px solid #aaa; line-height: 52px;  }
+.lnb li a { color:#222; font-size:14px; padding-left:1em; }
+.lnb li.act a { color:#2b5335; font-size:18px; font-weight:bold; }
+.page_box { width:980px; float:right; padding-left: 30px; }
+
+.page { padding-top:40px; overflow:visible; height:auto; min-height:100vh; }
+.page_wrap {width: 960px; }
+.page_tit { padding-bottom: 36px; color:#666; }
+.sub_pic img { display:block; max-width:940px; height:auto;   }
+.pic_lst { clear: both; }
+.pic_lst li { float:left; margin-right: 15px; margin-bottom: 15px; }
+.pic_lst li img { max-width:460px; }
+.sub_pic_tit { clear:both; font-size:20px; line-height: 1.6; }
+.sub_pic_com { clear:both; font-size:14px; line-height: 1.6; padding-bottom: 24px; }
+.sub_full_tit { clear:both; color:#305a4a; line-height: 3; font-size:32px; text-align: center; }
+.sub_con img { display:block; max-width:940px; }
+.sub_cate_com { clear:both; padding: 14px;  color:#666; line-height:1.8; 
+width: 940px; font-weight:300; }
+.map_area { clear:both; position:relative;     overflow: hidden;
+width: 940px; }
+.map_tit, .sub_cate_tit { clear:both; padding-left: 32px; line-height: 2.4; font-size:20px; 
+background-repeat: no-repeat; background-position:left center; 
+background-image: url("./source/subpage.png"); color:#134980; }
+
+#page2, #page3 { padding-top:130px; margin-top: 40px; border-top:5px solid rgb(27, 58, 14); }
+.onepage { clear:both; width: 50%; padding-top: 50px; padding-bottom: 50px; padding-left:200px;}
+.onepage img { display:block; width: 100%; }
+.page { display:none; }
+.page:target { display:block; }
+footer{position:relative}
+footer .ft_logo { margin-left:40px;}
+footer .footerSecInner{max-width:1200px;margin: 0 auto;box-sizing:border-box;position:relative; overflow:hidden;}
+footer .footerLinkWrap{border-bottom:1px solid #4d545e;padding:20px 0}
+footer .footer_nav ul{font-size:0 ; }
+footer .footer_nav ul li{display:inline-block; vertical-align:middle; font-size:14px; position:relative; }
+footer .footer_nav ul li a{display:inline-block; padding:0 15px 0 0;color:#222; font-size:15px; font-weight:bold; text-decoration-line: none;}
+footer .footer_nav ul li a:after{content:"";display:block;width:1px;height:13px;background:#222; position:absolute; top:2px; right:7px;}
+footer .footer_nav ul li:first-child a{color:#2c57b5}
+footer .footer_nav ul li:last-child a:after{display:none;}
+
+footer address{margin-top:20px; margin-left: 38px; color:rgb(0, 0, 0); font-size: 12px;}
+footer p{color:rgb(0, 0, 0); margin-left: 38px; font-size: 12px;}
+
+footer .logos{ position:absolute; margin-bottom :150px; right:0;}
+footer .logos ul li{float:left; list-style: none;}
+footer .logos ul li img,
+footer .logos ul li span{display:block; float:left;}
+footer .logos ul li span{padding-top:15px; margin: 0 10px 0 5px; font-weight:bold;}

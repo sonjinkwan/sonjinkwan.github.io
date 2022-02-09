@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 창</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+    /* 내부 스타일 */
+    .frm fieldset { width:600px; padding:100px; margin:20px auto; } 
+    .indata { display:block; width:600px; height:48px; line-height:48px; text-indent:16px; 
+    margin:30px auto; }
+    .btn_fr { width:600px; }
+    .btn_fr li:first-child { float:left; }
+    .btn_fr li:last-child { float:right; }
+    .inbtn { display:block; width:240px; height:48px; line-height:48px; text-align:center; 
+    background-color:#333; color:#fff; border:0; outline:0; border-radius:28px; }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="index.html"><img src="./img/logo.png" alt="" class="logo" /></a>
+    </div>
+        <div class="wrap">
+            <header class="hd">
+                <nav class="gnb">
+                       <ul>
+                           <li><a href="heavy.html" class="dp1">무거운 향수</a>
+                           <ul>
+                                  <li><a href="heavy.html">머스크</a></li>
+                                  <li><a href="heavy.html">우드</a></li>
+                                </ul>
+                            </li>
+                           <li><a href="light.html" class="dp1">가벼운 향수</a>
+                           <ul>
+                                  <li><a href="light.html">시트러스</a></li>
+                                  <li><a href="light.html">플로럴</a></li>
+                                </ul>
+                           </li>
+                           <li><a href="unisex.html" class="dp1">중성적인 향수</a>
+                           <ul>
+                                  <li><a href="unisex.html">시트러스</a></li>
+                                  <li><a href="unisex.html">머스크</a></li>
+                                </ul>
+                             </li>
+                           <li><a href="man.html" class="dp1">남성 향수</a>
+                           <ul>
+                                  <li><a href="man.html">시트러스</a></li>
+                                  <li><a href="man.html">우드</a></li>
+                                  <li><a href="man.html">오리엔탈</a></li>
+                                </ul>
+                           </li>
+                           <li><a href="woman.html" class="dp1">여성 향수</a>
+                           <ul>
+                                  <li><a href="woman.html">시트러스</a></li>
+                                  <li><a href="woman.html">머스크</a></li>
+                                  <li><a href="woman.html">플로럴</a></li>
+                               </ul>
+                            </li>    
+                       </ul>
+                   </nav> 
+            </header>
+         </div>
+         <nav class="jtnb">
+            <ul>
+                    <li>회원님 환영합니다</li>
+                    <li><a href="p_logout.html">로그아웃</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                    <li><a href="getNoticeList2.html">공지사항</a></li>
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="join.html">회원가입</a></li>
+    
+    
+            </ul>
+        </nav>
+    
+        <section class="content" style="background-color: #f1f1f1;">
+			<h2 class="con_tit">로그인</h2>
+			<form action="p_login.jsp" method="post" class="frm">
+				<fieldset>
+					<input type="text" class="indata" id="m_id" name="m_id" placeholder="아이디 입력" autofocus required />
+					<input type="password" class="indata" id="m_pw" name="m_pw" placeholder="비밀번호 입력" required />
+					<br /><br />
+					<ul class="btn_fr">
+						<li><input type="submit" class="inbtn" value="로그인"/></li>
+						<li><input type="reset" class="inbtn" value="취소"/></li>
+					</ul>
+				</fieldset>
+			</form>
+        </section>
+        <footer class="ft">
+            <div class="ft_wrap">
+                <p class="copyright">copyrights 2021. Companyname Co. all rights reserved.</p>
+                <address>경기도 고양시 일산동구 장항동 128</address>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

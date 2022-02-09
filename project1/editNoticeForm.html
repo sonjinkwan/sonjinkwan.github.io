@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>게시물 수정</title>
+</head>
+<body>
+   <style> 
+      header { text-align: center; margin-top: 20px;}
+      .tnb { position: absolute; right:50px; top: 20px; }
+      .gnb li { display: inline-block; margin-top: 50px; }
+      </style>
+      <header>
+      <h3>관리자 페이지</h3>
+            <a href="admin.html" class="logo">
+            <img src="./img/logo.png" alt="로고" />
+         </a>
+         <nav class="gnb">
+            <ul>
+               <li><a href="getMemberList.html">회원관리</a></li>
+               <li><a href="getProductList.html">제품관리</a></li>
+               <li><a href="getNoticeList.html">게시판 관리</a></li>
+            </ul>
+         </nav>
+         <nav class="tnb">
+            <ul>
+               <li><a href="admin_logout.html">관리자 로그아웃</a></li>
+            </ul>
+         </nav>
+      </header>
+<form action="" method="post" id="frm" name="frm">
+   <table class="tb">
+      <tbody>
+         <tr>
+            <th class="">
+               <label for="uidx">글 번호</label>
+            </th>
+            <td class="">
+               <input type="text" id="uidx" name="uidx" class="in_data" value="글번호" readonly required />
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="un_id" >작성자</label>
+            </th>
+            <td class="">
+               <input type="text" id="un_id" name="un_id" class="in_data" value="작성자" readonly />
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="utitle">글 제목</label>
+            </th>
+            <td class="">
+               <input type="text" id="utitle" name="utitle" class="in_data" value="글제목" />
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="ucontent">글 내용</label>
+            </th>
+            <td class="">
+               <input type="text" id="ucontent" name="ucontent" class="in_data" value="글내용"/>
+            </td>
+         </tr>
+         <tr>
+            <th class="">
+               <label for="ucon_date">작성날짜</label>
+            </th>
+			<td class="">
+               <input type="text" id="ucon_date" name="ucon_date" class="in_data" value="작성날짜" readonly />
+            </td>
+         </tr>
+      </tbody>
+   </table>
+    <hr />
+   <div class="btn_wrap">   
+      <button type="submit" class="in_btn" onclick="">수정</button>
+      <button type="reset" class="in_btn" onclick="">취소</button>
+   </div>   
+</form>
+</body>
+</html>
