@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 메타포 -->
+    <!-- 파비콘 -->
+    <!-- 오픈그래프 -->
+    <title>손진관의 포트폴리오</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./common.css"></script>
+    <script>
+    $(document).ready(function(){
+        var ht = $(window).height();
+        $(".gnb li button").click(function(){
+            var pos = parseInt($(this).attr("pos"));
+            var data = pos * ht;
+            $("body, html").not(":animated").animate({scrollTop : data+"px"}, 800);
+        });
+    });   
+    </script>
+    <style>
+    * { margin: 0; padding: 0; }
+body, html { width: 100%; }
+ul { list-style: none; }
+a { text-decoration: none; }
+
+.container { clear:both; }
+.hd { clear:both; width: 100%; height: 80px; position:relative; }
+.ft { clear:both; width:100%; height:70px; position:relative; border-top:5px solid #eee; }
+.content { clear:both; width: 100%; }
+.vs, .page { clear:both; width: 100%; min-height:100vh; border-top:1px solid #eee; }
+.page_tit { text-align: center; line-height: 4; padding-top: 20px; font-size: 20px; }
+#quick { position:fixed; right:40px; top:50%; margin-top: -80px;  z-index:9999; }
+
+.gnb { clear:both; width: 100%; height: 80px; position:fixed; top: 0; left: 0; z-index:9999; background-color:rgba(22,22,22,0.75);border-bottom:5px solid turquoise; }
+.gnb ul { clear:both; width: 1200px; height: 80px; margin: 0 auto; }
+.gnb li { float:left; }
+.gnb li a { display:block; padding: 20px; font-size:20px; color:#fff; }
+
+.gnb li button { display:block; padding: 20px; font-size:20px; color:#fff; outline:0; border:0; background-color:transparent; line-height: 2; cursor:pointer; }
+.gnb li button:hover{color: turquoise;}
+.ifr_wrap{width: 1200px; height: 70vh; overflow: hidden; margin: 0 auto;}
+.intro_con{width: 900px;float: right; }
+.intro_con li {clear: both; }
+.intro_con li span{ display: inline-block; text-align: justify; text-justify: inter-character; padding: 10px;}
+.intro_con li .intro_item_tit{width: 100px;font-size: 20px;}
+body,html { overflow-x: hidden; }    
+    .vs_fr { width: 1200px; height: 70vh; overflow:hidden; margin: 100px auto;}
+    .page_wrap { clear:both; width: 1200px; margin: 0 auto; 
+    position:relative; }
+    .photo_data { width: 300px; height: 300px; overflow:hidden; 
+    border-radius:150px; overflow:hidden; position:absolute; 
+    top: 150px; left: 150px; animation-name:intro_pic; 
+animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animation-timing-function: ease-out; }
+    @keyframes intro_pic {
+        0% { transform: rotate(360deg) scale(0.5);}
+        50% { transform: rotate(0deg) scale(1); }
+        100% { transform:translateX(90px); }
+    }
+    .photo_data img { display:block; width: 100%; height:auto; }
+    .intro_con { width: 600px; float:right; margin-top: 45px; }
+    .intro_con li {clear: both; }
+    .intro_con li span { display:inline-block; text-align: justify; text-justify:inter-character; padding: 10px; }
+    .intro_con li .intro_item_tit { width: 100px; font-size:20px; }
+    .intro_con li .intro_item_con { display:none; }
+
+    .skill_fr { width: 1195px; height:350px; }
+    .skill_fr li { width: 25%;  float:left; height: 200px; position:relative; text-align: center; margin-top: 20px;}
+    .sk_tit{text-align: center; line-height: 3; font-size: 30px; font-weight: bolder; border-bottom: 2px solid black;}
+    .skill_fr1 li{ width: 25%; float:left; height: 200px; position:relative; text-align: center; margin-top: 20px;}
+    .skill_fr li span { line-height: 3; font-weight: bolder; font-size: 20px;} 
+    .skill_fr1 li span { line-height: 3; font-weight: bolder; font-size: 20px; } 
+
+
+    .gal_fr { clear:both; width: 1200px; margin: 0 auto; }
+    .gal_fr li { width:300px; float:left; margin: 50px; position:relative; }
+    .gal_fr li a { display:block; width:300px; height: auto; }
+    .gal_fr li img { display:block; width: 300px; height: auto; }
+    .gal_fr li a .gal_tit_fr { position:absolute; width: 100%; top:0px; left: 0; height: 100%; opacity:0; visibility: hidden; transition-duration:0.7s; color:#fff; text-align: center; }
+    .gal_fr li a .gal_tit { line-height: 3; padding-top: 50px; }
+    .gal_fr li a .gal_com { line-height:1.6; padding-top:20px; }
+    .gal_fr li a:hover .gal_tit_fr { background-color: #333; opacity: 1; visibility: visible; }
+
+
+    .social_fr { clear:both; width: 1200px; margin: 250px auto; }
+    .social_fr li { float:left; width: 25%; height: 55px; text-align: center; }
+    .social_fr li span{display: block; width: 300px; margin-top: 20px; text-align: center; line-height: 1.6; font-size: 20px; font-weight: bold;}
+    .social_fr li.mobile { display:none; }
+
+    @media screen and (max-width:767px) {   /* 모바일의 실제 크기 : 767px 이하 */
+        .social_fr li:nth-child(4n) { clear:both; }
+        .social_fr li.mobile { display:block; }
+    }
+    .vs{background-color: #dfe1d5;}
+    #page2{background-color: #dfe1d5;}
+    #page4{background-color: #dfe1d5;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="hd">
+            <nav class="gnb">
+                <ul>
+                    <li><button pos="0">Home</button></li>
+                    <li><button pos="1">About</button></li>
+                    <li><button pos="2">Skills</button></li>
+                    <li><button pos="3">Projects</button></li>
+                    <li><button pos="4">Contact</button></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <section class="page" id="page1">
+                <div class="page_wrap">
+                    <h2 class="page_tit">About</h2>
+                    <div class="photo_data">
+                        <img src="./img/jk.jpg" alt="이미지">
+                    </div>
+                    <ul class="intro_con">
+                        <li class="item1">
+                            <span class="intro_item_tit">이름</span>
+                            <span class="intro_item_con">손진관</span>
+                        </li>
+                        <li class="item2">
+                            <span class="intro_item_tit">나이</span>
+                            <span class="intro_item_con">24세</span>
+                        </li>
+                        <li class="item3">
+                            <span class="intro_item_tit">희망직종</span>
+                            <span class="intro_item_con">웹 개발자(BackEnd or FrontEnd)</span>
+                        </li>
+                        <li class="item4">
+                            <span class="intro_item_tit">희망지역</span>
+                            <span class="intro_item_con">서울 + 경기 지역</span>
+                        </li>
+                        <li class="item5">
+                            <span class="intro_item_tit">사는 곳</span>
+                            <span class="intro_item_con">경기도 고양시 덕양구 주교동</span>
+                        </li>
+                        <li class="item5">
+                            <span class="intro_item_tit">연락처</span>
+                            <span class="intro_item_con">010-2469-5105</span>
+                        </li>
+                        <li class="item5">
+                            <span class="intro_item_tit">e-mail</span>
+                            <span class="intro_item_con">wlsrhks1112@naver.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                $(function(){
+                    $(".intro_con li").each(function(){
+                        $(this).find(".intro_item_con").delay($(this).index()*500).fadeIn(1000);
+                    });    
+                });    
+                </script>
+            </section>
+            <section class="page" id="page2">
+                <div class="page_wrap">
+                    <h2 class="page_tit">Skills</h2>
+                    <ul class="skill_fr">
+                        <p class="sk_tit">backend</p>
+                        <li class="item1">
+                            <div class="sk_img">
+                                <img src="./img/java.png" alt="">
+                            </div>
+                            <span class="lb">JAVA</span>
+                        </li>
+                        <li class="item2">
+                            <div class="sk_img">
+                                <img src="./img/jsp-logo.png" alt="">
+                            </div>
+                            <span class="lb">JSP</span>
+                        </li>
+                        <li class="item3">
+                            <div class="sk_img">
+                                <img src="./img/spring.png" alt="">
+                            </div>
+                            <span class="lb">SPRING</span>
+                        </li>
+                        <li class="item4">
+                            <div class="sk_img">
+                                <img src="./img/mvc.png" alt="">
+                            </div>
+                            <span class="lb">MVC2</span>
+                        </li>
+                    </ul>
+                    <ul class="skill_fr1">
+                        <p class="sk_tit">frontend</p>
+                        <li class="item5">
+                            <div class="sk_img">
+                                <img src="./img/html.png" alt="">
+                            </div>
+                            <span class="lb">HTML</span>
+                        </li>
+                        <li class="item6">
+                            <div class="sk_img">
+                                <img src="./img/css.png" alt="">
+                            </div>
+                            <span class="lb">css</span>
+                        </li>
+                        <li class="item7">
+                            <div class="sk_img">
+                                <img src="./img/jquery.png" alt="">
+                            </div>
+                            <span class="lb">jquery</span>
+                        </li>
+                        <li class="item8">
+                            <div class="sk_img">
+                                <img src="./img/js.png" alt="">
+                            </div>
+                            <span class="lb">JavaScript</span>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                $(function(){
+                    $("#page2").hover(function(){
+                        $(".skill_fr li").each(function(){
+                            var skill = parseInt($(this).find(".bar").attr("data-len"));
+                            $(this).find(".bar").height(skill*3.5);
+                        });
+                    });
+                });    
+                </script>
+            </section>
+            
+            <section class="page" id="page4">
+                <div class="page_wrap">
+                    <h2 class="page_tit">Contact</h2>
+                    <ul class="social_fr">
+                        <li class="item2"><a href="https://www.youtube.com/channel/UCIcFtOMjDEr3kuDQKt5G4fw" target="_blank"><img src="./img/utube.png" alt="유투브"></a><span>유튜브</span></li>
+                        <li class="item3"><a href="https://github.com/sonjinkwan/sonjinkwan.github.io" target="_blank"><img src="./img/git.png" alt="깃허브"></a><span>깃허브</span></li>
+                        <li class="item4"><a href="https://trello.com/b/oYr5d8xA/%EA%B9%80%EB%8C%80%ED%98%B8" target="_blank"><img src="./img/trel.png" alt="트렐로"></a><span>트렐로</span></li>
+                        <li class="item5"><a href="https://www.facebook.com" target="_blank"><img src="./img/facebook.png" alt="페이스북"></a><span>페이스북</span></li>
+                        <li class="item7 mobile"><a href="">전화</a></li>
+                        <li class="item8 mobile"><a href="">SMS</a></li>
+                    </ul>   
+                </div>
+            </section>
+        </div>
+        <footer class="ft">
+
+        </footer>
+    </div>
+</body>
+</html>
