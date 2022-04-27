@@ -39,7 +39,6 @@ display:none; }
 .gnb li .sub li a:hover { color:#00ffff; }
 .gnb li:hover .sub { display:block; }
 .gnb li:hover a.dp1 { background-color:deepskyblue; }
-
 .ft { width: 100%; position:relative; }
 .ft:before { content:""; display:block; width: 100%; height: 48px; 
     background-color: #004080; position:absolute; top: 0; left: 0; z-index:-1; }
