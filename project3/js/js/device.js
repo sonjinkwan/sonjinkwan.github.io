@@ -18,7 +18,7 @@
      return false;
  }
 
-// PC의 운영체제(OS)로 비교하여 구분하는 페이징 로드
+
 function deviceCheck2() {
     // 디바이스 종류 설정
     var pcDevice = "win16|win32|win64|mac|macintel";
