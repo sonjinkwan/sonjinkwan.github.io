@@ -5,7 +5,6 @@
 /*jshint evil:true */
   /** version */
   var version = '3.7.3';
-
   /** Preset options */
   var options = window.html5 || {};
 
